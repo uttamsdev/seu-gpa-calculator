@@ -1,0 +1,35 @@
+        input {
+            margin-bottom: 10px;
+            height: 40px;
+            width: 500px;
+            border: 1px solid lightgray;
+            outline: none;
+            padding-left: 10px;
+
+        }
+
+        form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            border: none;
+            background-color: rgba(0, 0, 0, 0.753);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+
+        #results {
+            display: inline;
+            color: red;
+        }
+
+        #result-text {
+            display: inline;
+            color: green;
+        }
