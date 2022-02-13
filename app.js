@@ -4,22 +4,18 @@ document.getElementById('input').addEventListener('keyup', function () {
         if(inputValue <=0){
             document.location.reload(true);
         }
+        
         if(inputValue <= 10){
               for (let i = 1; i <= inputValue; i++) {
             const inputItem = document.createElement('input');
             inputItem.setAttribute('id', i);
             const form = document.getElementById('form');
             form.appendChild(inputItem);
-            // input.value = '';
         }
         }
         else{
             alert('You cannot take more than 10 courses');
         }
-      
-
-
-
     });
 
     document.getElementById('btn').addEventListener('click', function () {
@@ -64,11 +60,17 @@ document.getElementById('input').addEventListener('keyup', function () {
             sum = sum + gpa;
         }
         let finalGpa = sum / (inputsValue * 3);
-        console.log(finalGpa);
 
-        document.getElementById('result-text').innerText = 'Your GPA is = ';
+        
 
-        document.getElementById('results').innerText = finalGpa;
+        if(inputsValue > 0){
+            document.getElementById('result-text').innerText = 'Your GPA is = ';
+             document.getElementById('results').innerText = finalGpa;
+        }
+        else{
+            alert('Your input number is negative or empty');
+        }
+       
 
 
     })
