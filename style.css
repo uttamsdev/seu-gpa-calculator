@@ -1,35 +1,84 @@
-        input {
-            margin-bottom: 10px;
-            height: 40px;
-            width: 500px;
-            border: 1px solid lightgray;
-            outline: none;
-            padding-left: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+input {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 500px;
+  border: 1px solid lightgray;
+  outline: none;
+  padding-left: 10px;
+}
 
-        }
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
 
-        form {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-        }
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.753);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
 
-        button {
-            border: none;
-            background-color: rgba(0, 0, 0, 0.753);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 50px;
-        }
+#results {
+  display: inline;
+  color: red;
+}
 
-        #results {
-            display: inline;
-            color: red;
-        }
+#result-text {
+  display: inline;
+  color: green;
+}
+.container{
+    height: 100vh;
+    /* padding-top: 200px;
+    display: grid;
+    place-items:  center;
+    background-color: rgba(240, 128, 128, 0.733); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 160, 122, 0.644);
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        #result-text {
-            display: inline;
-            color: green;
-        }
+.container img{
+    width: 160px;
+     margin-bottom: 5px;
+}
+.container h2{
+    margin-bottom: 5px;
+}
+@media (max-width:662px) {
+    .container{
+        overflow: hidden;
+
+    }
+
+ form input{
+     width: 80%;
+     width: 335px;
+ }
+ input{
+     width: 80%;
+     width: 335px;
+     margin-left: 30px;
+     margin-right: 30px;
+ }
+    
+}
