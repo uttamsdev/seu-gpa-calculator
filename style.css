@@ -46,7 +46,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(135, 206, 250, 0.37);
+    background-color: rgba(135, 206, 250, 0.198);
    
 }
 form{
@@ -80,6 +80,7 @@ small{
      width: 335px;
      margin-left: 30px;
      margin-right: 30px;
+     margin-bottom: 5px;
  }
     
 }
