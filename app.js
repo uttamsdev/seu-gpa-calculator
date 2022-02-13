@@ -1,14 +1,22 @@
 document.getElementById('input').addEventListener('keyup', function () {
         const input = document.getElementById('input');
         const inputValue = input.value;
-
-        for (let i = 1; i <= inputValue; i++) {
+        if(inputValue <=0){
+            document.location.reload(true);
+        }
+        if(inputValue <= 10){
+              for (let i = 1; i <= inputValue; i++) {
             const inputItem = document.createElement('input');
             inputItem.setAttribute('id', i);
             const form = document.getElementById('form');
             form.appendChild(inputItem);
             // input.value = '';
         }
+        }
+        else{
+            alert('You cannot take more than 10 courses');
+        }
+      
 
 
 
