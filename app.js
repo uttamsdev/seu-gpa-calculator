@@ -5,7 +5,7 @@ document.getElementById('input').addEventListener('keyup', function () {
             document.location.reload(true);
         }
         
-        if(inputValue <= 10){
+        if(inputValue <= 9){
               for (let i = 1; i <= inputValue; i++) {
             const inputItem = document.createElement('input');
             inputItem.setAttribute('id', i);
