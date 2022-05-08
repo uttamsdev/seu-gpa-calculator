@@ -56,15 +56,27 @@ document.getElementById('input').addEventListener('keyup', function () {
                 gpa = 2.0 * 3.0;
             }
             else if(resultValue===''){
-                alert('Please fill up the all input filed to get result. Thank you.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops.. Input filed empty.',
+                    text: 'Please fill up the all input filed!',
+                  });
                 return;
             }
             else if(resultValue < 0){
-                alert('You cannot enter negative value');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops... You entered negative marks.',
+                    text: 'Please Enter positive marks!',
+                  });
                 return;
             }
             else if(resultValue > 100){
-                alert('Mark value cannot be more than 100');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...  Marks greater than 100',
+                    text: 'Marks cannot be more than 100!',
+                  });
                 return;
             }
             else {
