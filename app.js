@@ -9,6 +9,8 @@ document.getElementById('input').addEventListener('keyup', function () {
               for (let i = 1; i <= inputValue; i++) {
             const inputItem = document.createElement('input');
             inputItem.setAttribute('id', i);
+            inputItem.placeholder = `Enter the Mark of subject ${i}`;
+            inputItem.type = "number";
             const form = document.getElementById('form');
             form.appendChild(inputItem);
         }
@@ -25,7 +27,6 @@ document.getElementById('input').addEventListener('keyup', function () {
         for (let i = 1; i <= inputsValue; i++) {
             let result = document.getElementById(i);
             let resultValue = result.value;
-            // console.log(resultValue);
 
             if (resultValue >= 80 && resultValue <= 100) {
                 gpa = 4.0 * 3.0;
@@ -54,6 +55,18 @@ document.getElementById('input').addEventListener('keyup', function () {
             else if (resultValue >= 40 && resultValue <= 44) {
                 gpa = 2.0 * 3.0;
             }
+            else if(resultValue===''){
+                alert('Please fill up the all input filed to get result. Thank you.');
+                return;
+            }
+            else if(resultValue < 0){
+                alert('You cannot enter negative value');
+                return;
+            }
+            else if(resultValue > 100){
+                alert('Mark value cannot be more than 100');
+                return;
+            }
             else {
                 gpa = 0;
             }
@@ -65,7 +78,7 @@ document.getElementById('input').addEventListener('keyup', function () {
 
         if(inputsValue > 0){
             document.getElementById('result-text').innerText = 'Your GPA is = ';
-             document.getElementById('results').innerText = finalGpa;
+             document.getElementById('results').innerText = finalGpa.toFixed(3);
         }
         else{
             alert('Your input number is negative or empty');
